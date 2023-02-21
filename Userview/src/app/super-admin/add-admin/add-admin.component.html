@@ -1,0 +1,11 @@
+<div *ngIf="AddAdmin==true" class="AddAdmin">
+    <div class="main-body">
+        <h2><strong>Add Admin</strong></h2>
+        <form (ngSubmit)="Add()" [formGroup]="AddAdminArray">
+            <input class="form-control mb-2" type="text" placeholder="Enter New Admin Id" formControlName="UserId" name="UserId">
+            <input class="form-control" type="password" placeholder="Enter New Password" formControlName="password" name="password">
+            <button class="btn btn-danger w-25 m-3"(click)="cancel()">cancel</button>
+            <button class="btn btn-success w-25 m-3" type="submit">Add</button>
+        </form>
+    </div>
+</div>

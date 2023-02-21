@@ -1,0 +1,29 @@
+<div class="row container-fluid">
+    <div class="col-4"></div>
+    <div class="col-md-4 mt-5">
+        <div class="p-5 mt-5">
+            <div class="login-container text-center">
+                <h1 class="mt-4"><strong>Admin User</strong></h1>
+                <div>
+                    <form (ngSubmit)="Login()" [formGroup]="adminUserArray">
+                        <input class="form-control mb-3 mt-4" type="text" placeholder="Enter Admin User Id"
+                            formControlName="UserId" name="UserId">
+                        <input class="form-control" type="password" placeholder="Enter your Password"
+                            formControlName="password" name="password">
+                        <button class="btn btn-success mt-4 mb-3 w-50" type="submit">Login</button>
+                    </form>
+                </div>
+                <div class="hr-div h-100">
+                    <p class="hr-or">or</p>
+                </div>
+
+                <div class="mb-4">
+                    <button class="btn btn-outline-danger admin-button" (click)="SuperAdmin()">Super Admin</button>
+                    <button class="btn btn-outline-primary admin-button" (click)="Admin()">Admin</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-4"></div>
+</div>

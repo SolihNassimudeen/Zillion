@@ -1,0 +1,38 @@
+<app-nav-bar></app-nav-bar>
+<app-add-product [Addproduct]="Addproduct" (onCancel)="cancel()"></app-add-product>
+<div class="text-center">
+    <button class="btn btn-outline-secondary w-25" (click)="AddProduct()">Add Product</button>
+</div>
+
+<div class="row container-fluid mt-4" (click)="cancel()">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="table-div">
+            <div class="text-center">
+                <h2><strong>Product List</strong></h2>
+            </div>
+            <div>
+                <table class="table">
+                    <thead class="table table-info">
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Description</th>
+                            <th>Product Price</th>
+                            <th>Discount</th>
+                            <th>GST of 18% Flat</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table ">
+                        <tr *ngFor="let data of productlist">
+                            <td>{{data.productName}}</td>
+                            <td>{{data.productDiscription}}</td>
+                            <td>{{data.productprice}}</td>
+                            <td>{{data.Discount}}</td>
+                            <td>{{data.GST}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

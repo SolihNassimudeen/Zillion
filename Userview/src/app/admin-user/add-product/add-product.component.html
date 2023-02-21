@@ -1,0 +1,15 @@
+<div *ngIf="Addproduct==true" class="AddAdmin">
+    <div class="main-body">
+        <h2><strong>Add Product</strong></h2>
+        <form (ngSubmit)="Add()" [formGroup]="AddProductArray">
+            <input class="form-control mb-2" type="text" placeholder="Product Name" formControlName="productName" name="productName">
+            <input class="form-control mb-2" type="text" placeholder="Product Description" formControlName="productDiscription" name="productDiscription">
+            <input class="form-control mb-2" type="text" placeholder="Product Price" formControlName="productprice" name="productprice">
+            <input class="form-control mb-2" type="text" placeholder="Product Discount" formControlName="Discount" name="Discount">
+            <input class="form-control" type="text" placeholder="Product GST" formControlName="GST" name="GST">
+
+            <button class="btn btn-danger w-25 m-3"(click)="cancel()">cancel</button>
+            <button class="btn btn-success w-25 m-3" type="submit">Add</button>
+        </form>
+    </div>
+</div>

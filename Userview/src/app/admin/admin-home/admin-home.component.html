@@ -1,0 +1,68 @@
+<app-nav-bar></app-nav-bar>
+<app-add-user-admin [AddUserAdmin]="AddUserAdmin" (onCancel)="cancelevent()"></app-add-user-admin>
+<div class="text-center">
+    <button class="btn btn-outline-secondary w-25" (click)="AddUserAdminbutton()">Add User Admin</button>
+</div>
+
+<div class="row container-fluid" (click)="cancelevent()">
+    <div class="col-md-6">
+        <div class="table-div">
+            <div class="text-center">
+                <h2><strong>Product List</strong></h2>
+            </div>
+            <div>
+                <table class="table">
+                    <thead class="table table-info">
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Description</th>
+                            <th>Product Price</th>
+                            <th>Discount</th>
+                            <th>GST of 18% Flat</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table ">
+                        <tr *ngFor="let data of productlist">
+                            <td>{{data.productName}}</td>
+                            <td>{{data.productDiscription}}</td>
+                            <td>{{data.productprice}}</td>
+                            <td>{{data.Discount}}</td>
+                            <td>{{data.GST}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="table-div">
+            <div class="text-center">
+                <h2><strong>Product Approve Request List</strong></h2>
+            </div>
+            <table class="table">
+                <thead class="table table-danger">
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Product Description</th>
+                        <th>Product Price</th>
+                        <th>Discount</th>
+                        <th>GST of 18% Flat</th>
+                        <th>Approve</th>
+                        <th>Reject</th>
+                    </tr>
+                </thead>
+                <tbody class="table ">
+                    <tr *ngFor="let data of productApproveRequestlist">
+                        <td>{{data.productName}}</td>
+                        <td>{{data.productDiscription}}</td>
+                        <td>{{data.productprice}}</td>
+                        <td>{{data.Discount}}</td>
+                        <td>{{data.GST}}</td>
+                        <td><button class="btn btn-outline-success" (click)="productApprove(data._id)">Approve</button></td>
+                        <td><button class="btn btn-outline-danger" (click)="reject(data._id)">Reject</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

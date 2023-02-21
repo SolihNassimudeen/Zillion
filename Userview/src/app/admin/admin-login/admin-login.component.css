@@ -1,0 +1,30 @@
+.login-container {
+    border: 1px solid rgb(188, 185, 185);
+    border-radius: 20px;
+    padding: 2%;
+    box-shadow: 0px 15px 10px -15px #111;    
+}
+
+.hr-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hr-or {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    column-gap: 1.6rem;
+}
+.hr-or::before,.hr-or::after{
+    content: "";
+    height: 1px;
+    background-color: black;
+    display: block;
+}
+
+.admin-button{
+    width: 40%;
+    margin: 2%;
+}
